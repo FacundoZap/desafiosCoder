@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+/* Color Theme Swatches in Hex */
+.Dark-chocolate-on-pink-background-1-hex { color: #732D3A; }
+.Dark-chocolate-on-pink-background-2-hex { color: #A65161; }
+.Dark-chocolate-on-pink-background-3-hex { color: #F2A2B1; }
+.Dark-chocolate-on-pink-background-4-hex { color: #BFACAA; }
+.Dark-chocolate-on-pink-background-5-hex { color: #401A1A; }
+
+/* Color Theme Swatches in RGBA */
+.Dark-chocolate-on-pink-background-1-rgba { color: rgba(114, 44, 57, 1); }
+.Dark-chocolate-on-pink-background-2-rgba { color: rgba(165, 81, 96, 1); }
+.Dark-chocolate-on-pink-background-3-rgba { color: rgba(242, 162, 176, 1); }
+.Dark-chocolate-on-pink-background-4-rgba { color: rgba(191, 171, 170, 1); }
+.Dark-chocolate-on-pink-background-5-rgba { color: rgba(63, 26, 26, 1); }
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html{
+    font-size: 62,5%;
+    font-family: 'Merriweather', serif;
+}
+
+/* header */
+
+.logo{
+    width: 150px;
+    margin-top: 20px;
+}
+
+.logo2{
+    justify-content: center;
+}
+
+header{
+    background-color:#BFACAA;
+    border-bottom: dashed #401A1A 2px;   
+}
+
+    header nav{
+    }
+
+        header nav ul{
+        }
+
+            header nav ul li{
+                font-size: 1rem;
+                border: outset 2px;
+                border-color: #732D3A;
+                margin: 5px 20px;
+                padding: 3px;
+                list-style: none;
+            }
+                header nav ul li a{
+                    color: #401A1A;
+                    text-decoration: none;
+                }
+
+.contenedor{
+    display: flex;
+}
+
+
+.links{
+    justify-content: center;
+}
+
+
+
+/* main */
+
+main{
+    background-color: #F2A2B1;
+    border-bottom: dashed #401A1A 2px;
+}
+
+    main section img{
+        width: 70vw;
+        margin: 30px 20px;     
+    }
+
+    main section p{
+        width: 70vw;
+        text-align: center;
+    }
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+    color: #401A1A;
+    padding: 50px 0;
+}
+
+/* INDEX */
+
+.principal{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* CONTACTO */
+
+.formulario li{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 20px 60px;
+}
+
+    .formulario li label{
+        flex: 1 0 120px;
+        max-width: 220px;
+    }
+
+    .formulario li button{
+        margin-left: auto;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 2px;
+    }
+
+    .formulario li label + *{
+        flex: 1 0 220px;
+    }
+
+.h3contacto{
+    text-align: center;
+}
+
+.contactoMain{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa{ 
+    width: 70vw;
+    margin-top: 10px;
+}
+
+/* PRODUCTOS */
+
+.productos{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.productos_espacio{
+
+}
+
+.fotoProducto{
+    width: 70vw;
+    border-radius: 100px 0px 100px 0px;
+    -moz-border-radius: 100px 0px 100px 0px;
+    -webkit-border-radius: 100px 0px 100px 0px;
+    border: 10px solid #401A1A;
+}
+
+figure figcaption{
+    text-align: center;
+    font-size: 1,5rem;
+    color: #401A1A;
+}
+
+/* NOSOTROS */
+
+.nosotrosMain{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nosotrosFoto{
+    width: 80vw;
+}
+
+.nosotrosParrafo{
+    width: 80vw;
+    margin: 20px 5px;
+}
+
+/* GALERIA */
+
+.galeria{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.galeriaFoto{
+    width: 70vw;
+}
+
+.galeriaH3{
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* footer */
+footer{
+    background-color: #A65161;
+}
+
+    footer a{
+    }
+
+        footer a img{
+            width: 10vw;
+            padding: 30px 20px;
+        }
+.redes{
+    justify-content: space-evenly;
+}
+
+
+        /* Aplicando grid y responsive*/
+
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header"
+    "main"
+    "pie";
+}
+#header{
+    grid-area: header;
+}
+
+#main{
+    grid-area: main;
+}
+
+#footer{
+    grid-area: pie;}
+
+
+/* Media a 768 */
+
+@media (min-width: 768px){
+/* Index */
+    .principal{
+        flex-direction: row;
+    }
+
+    .indexParrafo{
+        margin: 0 30px;
+    }
+
+/* Nosotros */
+    .nosotrosMain{
+        flex-direction: row;
+    }
+
+    .nosotrosMainReverse{
+        flex-direction: row-reverse;
+    }
+    
+    .nosotrosParrafo{
+        margin: 0 30px;    
+    }
+
+/* Productos */
+    .productos{
+    }
+
+    .fotoProducto{
+        width: 35vw;
+    }
+
+    .productosGrid{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "foto1 foto2"
+        "foto3 foto4";
+    }
+    #foto1{
+        grid-area: foto1;
+    }
+    #foto2{
+        grid-area: foto2;
+    }
+    #foto3{
+        grid-area: foto3;
+    }
+    #foto4{
+        grid-area: foto4;
+    }
+
+/* Galeria */
+
+.galeria{
+    flex-direction: column;
+    justify-content: start;
+}
+
+.galeriaFoto{
+    width: 28vw;
+}
+
+.galeriaGrid{
+    display: grid;
+    grid-template-columns: 33vw 33vw 33vw;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "madre pascuas amigo";
+}
+
+#galeria1{
+    grid-area: madre;
+}
+
+#galeria2{
+    grid-area: pascuas;
+}
+
+#galeria3{
+    grid-area: amigo;
+}
+}
+
+/* Media a 1024 */
+
+@media (min-width: 1024px){
+
+/* Index */
+
+.logo2{
+    justify-content: left;
+    padding-left: 20px;
+}
+
+.links{
+    justify-content: end;
+}
+ .redes{
+    justify-content: start;
+}
+
+.face{
+    width: 5vw;
+}
+
+/* Nosotros */
+
+/* Productos */
+
+.productosGrid{
+    grid-template-columns: 20vw 20vw 20vw 20vw;
+    grid-template-areas: "foto1 foto2 foto3 foto4";
+    align-items: start;
+    justify-content: space-around;
+}
+
+.productos{
+margin-bottom: 30px;
+}
+
+.fotoProducto{
+   width: 18vw;
+}
+
+/* Galeria */
+
+/* Contacto */
+
+.contactoMain{
+    flex-direction: row-reverse;
+    margin-bottom: 40px;
+}
+
+.mapa{
+    width: 50vw;
+    height: 30vh;
+}
+
+}
