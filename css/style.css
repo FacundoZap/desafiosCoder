@@ -350,6 +350,7 @@ footer{
 
 .face{
     width: 5vw;
+    margin: 5px 0;
 }
 
 /* Nosotros */
@@ -382,7 +383,30 @@ margin-bottom: 30px;
 
 .mapa{
     width: 50vw;
-    height: 30vh;
+    height: 40vh;
 }
 
+}
+
+
+/* ANIMACIONES */
+
+.header-degrade{
+    background: linear-gradient(to bottom, #401A1A, #BFACAA);
+}
+
+.footer-degrade{
+    background: linear-gradient(to top, #732D3A,#401A1A);
+}
+
+.li-nav_scale:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 0,5s;
+}
+
+.footer-redes_scale:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 0,5s;
 }
